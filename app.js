@@ -2,8 +2,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const PORT = process.env.PORT || 4000;
-
 const app = express()
+
+require('./app/routes/tutorial.routes')(app);
 
 var corsOptions = {
 	origin: "http://localhost:8081"
